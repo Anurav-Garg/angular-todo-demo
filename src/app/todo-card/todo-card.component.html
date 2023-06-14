@@ -1,5 +1,5 @@
 <div class="todo-card">
-  <p class="todo-title">Da Title</p>
+  <input class="todo-title" [placeholder]="'Title...'" />
   <div class="todo-list">
     <div *ngFor="let todoItem of todoItems">
       <app-todo-item
@@ -8,6 +8,9 @@
         (deleteEvent)="deleteTask($event)"
       ></app-todo-item>
     </div>
-    <button (click)="addTask()">Add a Task</button>
+    <button class="add-task-button" (click)="addTask()">
+      <span class="material-symbols-outlined"> add_circle </span>
+      <span>Add a Task</span>
+    </button>
   </div>
 </div>

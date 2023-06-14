@@ -1,11 +1,27 @@
 <div class="task">
-  <span><button (click)="toggleCheck()">check</button></span>
-  <span
+  <span class="checkbox-container"
+    ><button class="checkbox" (click)="toggleCheck()">
+      <span
+        *ngIf="checked; else uncheckedButton"
+        class="material-symbols-outlined md-24"
+      >
+        check_box
+      </span>
+      <ng-template #uncheckedButton>
+        <span class="material-symbols-outlined md-24">
+          check_box_outline_blank
+        </span>
+      </ng-template>
+    </button></span
+  >
+  <input
     class="task-text"
     [contentEditable]="true"
     [ngStyle]="{ 'text-decoration-line': checked ? 'line-through' : 'none' }"
-  >
-    {{ task }}
-  </span>
-  <button (click)="deleteTask()">delete</button>
+    [placeholder]="'Your task...'"
+  />
+  {{ task }}
+  <button (click)="deleteTask()">
+    <span class="material-symbols-outlined md-24"> delete_forever </span>
+  </button>
 </div>
