@@ -26,6 +26,7 @@
     [(ngModel)]="text"
     #ctrl="ngModel"
     (input)="updateText()"
+    size="1"
   />
   <button class="delete-button" (click)="deleteTask()">
     <span class="material-symbols-outlined md-24"> delete_forever </span>

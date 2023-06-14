@@ -1,5 +1,5 @@
 <div class="todo-card">
-  <input class="todo-title" [placeholder]="'Title'" />
+  <input class="todo-title" [placeholder]="'Title'" size="2" />
   <div class="todo-list">
     <div *ngFor="let todoItem of findUncheckedTasks()">
       <app-todo-item
