@@ -1,1 +1,11 @@
-<p>{{task}}</p>
+<div class="task">
+  <span><button (click)="toggleCheck()">check</button></span>
+  <span
+    class="task-text"
+    [contentEditable]="true"
+    [ngStyle]="{ 'text-decoration-line': checked ? 'line-through' : 'none' }"
+  >
+    {{ task }}
+  </span>
+  <button (click)="deleteTask()">delete</button>
+</div>
