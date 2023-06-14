@@ -13,7 +13,6 @@ export class TodoCardComponent {
     this.todoItems.push({
       id: this.todoItems.length,
       checked: false,
-      text: '',
     });
   }
 
