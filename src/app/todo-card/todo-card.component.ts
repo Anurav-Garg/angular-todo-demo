@@ -7,7 +7,12 @@ import { TodoItem } from './todoItem';
   styleUrls: ['./todo-card.component.css'],
 })
 export class TodoCardComponent {
-  todoItems: TodoItem[] = [];
+  todoItems: TodoItem[] = [
+    {
+      id: 0,
+      checked: false,
+    },
+  ];
 
   addTask(): void {
     this.todoItems.push({
