@@ -5,7 +5,9 @@
       <app-todo-item
         [(checked)]="todoItem.checked"
         [id]="todoItem.id"
+        (deleteEvent)="deleteTask($event)"
       ></app-todo-item>
     </div>
+    <button (click)="addTask()">Add a Task</button>
   </div>
 </div>
