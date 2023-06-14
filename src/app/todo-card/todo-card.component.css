@@ -28,10 +28,16 @@
   border-bottom-width: 0px;
   background-color: inherit;
   padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   text-align: left;
   font-size: 1rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
   color: rgb(107 114 128);
+  cursor: pointer;
+}
+
+.add-task-button:hover {
+  color: rgb(0 0 0);
 }

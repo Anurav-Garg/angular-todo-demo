@@ -16,11 +16,31 @@
   outline-offset: 2px;
   border-style: none;
   font-size: 1.125rem;
+  color: rgb(55 65 81);
+}
+
+.task-text.checked {
+  color: rgb(107 114 128);
+  text-decoration-line: line-through;
 }
 
 button {
   border-style: none;
   background-color: inherit;
+  cursor: pointer;
+  color: rgb(75 85 99); 
+}
+
+button.checked {
+  color: rgb(107 114 128);
+}
+
+.checkbox:hover {
+  color: rgb(0 0 0);
+}
+
+.delete-button:hover {
+  color: rgb(239 68 68);
 }
 
 .material-symbols-outlined.md-18 { font-size: 18px; }
