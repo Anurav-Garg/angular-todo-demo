@@ -1,0 +1,11 @@
+<div class="todo-card">
+  <p class="todo-title">Da Title</p>
+  <div class="todo-list">
+    <div *ngFor="let todoItem of todoItems">
+      <app-todo-item
+        [(checked)]="todoItem.checked"
+        [id]="todoItem.id"
+      ></app-todo-item>
+    </div>
+  </div>
+</div>
