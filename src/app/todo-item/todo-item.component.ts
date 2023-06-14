@@ -24,8 +24,6 @@ export class TodoItemComponent {
   }
 
   deleteTask() {
-    console.log(this.text);
-
     this.deleteEvent.emit(this.id);
   }
 }

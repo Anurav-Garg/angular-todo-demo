@@ -24,8 +24,6 @@ export class TodoCardComponent {
   }
 
   deleteTask(id: number): void {
-    console.log(this.todoItems[id]);
-
     if (id < this.todoItems.length) {
       this.todoItems.splice(id, 1);
       this.todoItems.forEach((todoItem: TodoItem, index: number) => {
