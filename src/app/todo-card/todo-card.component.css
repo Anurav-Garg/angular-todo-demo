@@ -8,11 +8,30 @@
 }
 
 .todo-title {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   line-height: 1.75rem;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  border-style: none;
+  margin-bottom: 0.75rem;
 }
 
 .todo-list {
-  flex: 1 1 auto;
+  display: flex;
   flex-direction: column;
+  gap: 0.5rem;
+}
+
+.add-task-button {
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 0px;
+  background-color: inherit;
+  padding-top: 0.5rem;
+  text-align: left;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgb(107 114 128);
 }
