@@ -1,9 +1,11 @@
 <div class="todo-card">
-  <input class="todo-title" [placeholder]="'Title...'" />
+  <input class="todo-title" [placeholder]="'Title'" />
   <div class="todo-list">
-    <div *ngFor="let todoItem of todoItems">
+    <div *ngFor="let todoItem of findUncheckedTasks()">
       <app-todo-item
+        *ngIf="!todoItem.checked"
         [(checked)]="todoItem.checked"
+        [(text)]="todoItem.text"
         [id]="todoItem.id"
         (deleteEvent)="deleteTask($event)"
       ></app-todo-item>
@@ -12,5 +14,14 @@
       <span class="material-symbols-outlined"> add_circle </span>
       <span>Add a Task</span>
     </button>
+    <div *ngFor="let todoItem of findCheckedTasks()">
+      <app-todo-item
+        *ngIf="todoItem.checked"
+        [(checked)]="todoItem.checked"
+        [(text)]="todoItem.text"
+        [id]="todoItem.id"
+        (deleteEvent)="deleteTask($event)"
+      ></app-todo-item>
+    </div>
   </div>
 </div>
