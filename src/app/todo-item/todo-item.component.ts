@@ -10,9 +10,14 @@ export class TodoItemComponent {
   @Input() id: number = 0;
   task: string = '';
   @Output() checkedChange = new EventEmitter<boolean>();
+  @Output() deleteEvent = new EventEmitter<number>();
 
   toggleCheck() {
     this.checked = !this.checked;
     this.checkedChange.emit(this.checked);
+  }
+
+  deleteTask() {
+    this.deleteEvent.emit(this.id);
   }
 }
