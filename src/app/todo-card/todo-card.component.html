@@ -1,4 +1,7 @@
 <div class="todo-card">
+  <button class="delete-card-button" (click)="deleteTodo()">
+    <span class="material-symbols-outlined md-36"> cancel </span>
+  </button>
   <input class="todo-title" [placeholder]="'Title'" size="2" />
   <div class="todo-list">
     <div *ngFor="let todoItem of findUncheckedTasks()">

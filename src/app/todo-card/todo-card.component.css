@@ -5,6 +5,8 @@
   padding-right: 2rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  position: relative;
+  min-height: 8rem;
 }
 
 .todo-title {
@@ -41,3 +43,28 @@
 .add-task-button:hover {
   color: rgb(0 0 0);
 }
+
+.delete-card-button {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  margin-top: -0.25rem;
+  margin-right: -0.75rem;
+}
+
+.delete-card-button:hover {
+  color: rgb(239 68 68);
+}
+
+button {
+  border-style: none;
+  background-color: inherit;
+  cursor: pointer;
+  color: rgb(75 85 99);
+  min-width: 0px;
+}
+
+.material-symbols-outlined.md-18 { font-size: 18px; }
+.material-symbols-outlined.md-24 { font-size: 24px; }
+.material-symbols-outlined.md-36 { font-size: 36px; }
+.material-symbols-outlined.md-48 { font-size: 48px; }

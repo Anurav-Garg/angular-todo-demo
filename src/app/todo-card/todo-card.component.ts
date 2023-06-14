@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { TodoItem } from './todoItem';
 
 @Component({
@@ -7,6 +7,10 @@ import { TodoItem } from './todoItem';
   styleUrls: ['./todo-card.component.css'],
 })
 export class TodoCardComponent {
+  @Input() id: number = 0;
+
+  @Output() deleteEvent = new EventEmitter<number>();
+
   todoItems: TodoItem[] = [
     {
       id: 0,
@@ -42,5 +46,9 @@ export class TodoCardComponent {
     return this.todoItems.filter((todoItem) => {
       return todoItem.checked;
     });
+  }
+
+  deleteTodo(): void {
+    this.deleteEvent.emit(this.id);
   }
 }
