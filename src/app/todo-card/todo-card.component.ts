@@ -9,7 +9,7 @@ import { TodoItem } from './todoItem';
 export class TodoCardComponent {
   todoItems: TodoItem[] = [];
 
-  addTodo(): void {
+  addTask(): void {
     this.todoItems.push({
       id: this.todoItems.length,
       checked: false,
@@ -17,7 +17,7 @@ export class TodoCardComponent {
     });
   }
 
-  deleteTodo(id: number): void {
+  deleteTask(id: number): void {
     if (id < this.todoItems.length) {
       this.todoItems.splice(id, 1);
       this.todoItems.forEach((todoItem: TodoItem, index: number) => {
