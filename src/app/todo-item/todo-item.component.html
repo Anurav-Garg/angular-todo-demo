@@ -1,6 +1,10 @@
 <div class="task">
   <span class="checkbox-container"
-    ><button class="checkbox" (click)="toggleCheck()">
+    ><button
+      class="checkbox"
+      (click)="toggleCheck()"
+      [ngClass]="{ checked: checked }"
+    >
       <span
         *ngIf="checked; else uncheckedButton"
         class="material-symbols-outlined md-24"
@@ -12,16 +16,18 @@
           check_box_outline_blank
         </span>
       </ng-template>
-    </button></span
-  >
+    </button>
+  </span>
   <input
     class="task-text"
-    [contentEditable]="true"
-    [ngStyle]="{ 'text-decoration-line': checked ? 'line-through' : 'none' }"
-    [placeholder]="'Your task...'"
+    [disabled]="checked"
+    [ngClass]="{ checked: checked }"
+    [placeholder]="'Your task'"
+    [(ngModel)]="text"
+    #ctrl="ngModel"
+    (input)="updateText()"
   />
-  {{ task }}
-  <button (click)="deleteTask()">
+  <button class="delete-button" (click)="deleteTask()">
     <span class="material-symbols-outlined md-24"> delete_forever </span>
   </button>
 </div>

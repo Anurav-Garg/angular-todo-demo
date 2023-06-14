@@ -8,8 +8,10 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class TodoItemComponent {
   @Input() checked: boolean = false;
   @Input() id: number = 0;
-  task: string = '';
+  @Input() text: string = '';
+
   @Output() checkedChange = new EventEmitter<boolean>();
+  @Output() textChange = new EventEmitter<string>();
   @Output() deleteEvent = new EventEmitter<number>();
 
   toggleCheck() {
@@ -17,7 +19,13 @@ export class TodoItemComponent {
     this.checkedChange.emit(this.checked);
   }
 
+  updateText() {
+    this.textChange.emit(this.text);
+  }
+
   deleteTask() {
+    console.log(this.text);
+
     this.deleteEvent.emit(this.id);
   }
 }
