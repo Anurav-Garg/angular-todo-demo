@@ -2,7 +2,13 @@
   <button class="delete-card-button" (click)="deleteTodo()">
     <span class="material-symbols-outlined md-36"> cancel </span>
   </button>
-  <input class="todo-title" [placeholder]="'Title'" size="2" />
+  <input
+    class="todo-title"
+    [placeholder]="'Title'"
+    size="2"
+    [(ngModel)]="todoCardInfo.title"
+    (ngModelChange)="updateCard()"
+  />
   <div class="todo-list">
     <div *ngFor="let todoItem of findUncheckedTasks()">
       <app-todo-item
@@ -11,6 +17,7 @@
         [(text)]="todoItem.text"
         [id]="todoItem.id"
         (deleteEvent)="deleteTask($event)"
+        (updateEvent)="updateCard()"
       ></app-todo-item>
     </div>
     <button class="add-task-button" (click)="addTask()">
@@ -25,6 +32,7 @@
           [(text)]="todoItem.text"
           [id]="todoItem.id"
           (deleteEvent)="deleteTask($event)"
+          (updateEvent)="updateCard()"
         ></app-todo-item>
       </div>
     </div>

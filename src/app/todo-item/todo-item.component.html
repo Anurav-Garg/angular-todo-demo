@@ -24,8 +24,8 @@
     [ngClass]="{ checked: checked }"
     [placeholder]="'Your task'"
     [(ngModel)]="text"
+    (ngModelChange)="updateText()"
     #ctrl="ngModel"
-    (input)="updateText()"
     size="1"
   />
   <button class="delete-button" (click)="deleteTask()">

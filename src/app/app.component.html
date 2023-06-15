@@ -5,10 +5,14 @@
     made with Angular
   </h1>
   <div class="todo-container">
-    <div *ngFor="let todoCard of todoCards" class="todo-card-container">
+    <div
+      *ngFor="let todoCard of todoCards; index as i"
+      class="todo-card-container"
+    >
       <app-todo-card
-        [id]="todoCard"
+        [(todoCardInfo)]="todoCards[i]"
         (deleteEvent)="deleteCard($event)"
+        (updateEvent)="updateLocalStorage($event)"
       ></app-todo-card>
     </div>
     <button class="add-card-button" (click)="addCard()">
