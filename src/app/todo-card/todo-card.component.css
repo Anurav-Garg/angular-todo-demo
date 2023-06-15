@@ -16,6 +16,7 @@
   outline-offset: 2px;
   border-style: none;
   margin-bottom: 0.75rem;
+  width: 100%;
 }
 
 .todo-list {
