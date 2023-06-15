@@ -71,6 +71,16 @@ button {
   min-width: 0px;
 }
 
+.first-checked {
+  border-style: dashed;
+  border-color:  rgb(156 163 175);
+  border-top-width: 0.125rem;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-left-width: 0px;
+  padding-top: 0.5rem;
+}
+
 .material-symbols-outlined.md-18 { font-size: 18px; }
 .material-symbols-outlined.md-24 { font-size: 24px; }
 .material-symbols-outlined.md-36 { font-size: 36px; }
