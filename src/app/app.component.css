@@ -46,6 +46,9 @@
   font-size: 1.25rem;
   line-height: 1.75rem;
   min-height: 10rem;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
 }
 
 .add-card-button:hover {
